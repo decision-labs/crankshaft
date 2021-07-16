@@ -29,7 +29,7 @@ from crankshaft.analysis_data_provider import AnalysisDataProvider
 #
 # random.seed(1234)
 # np.random.seed(1234)
-# lgstar_queen = ps.esda.getisord.G_Local(y, w_queen, star=True,
+# lgstar_queen = ps.explore.esda.getisord.G_Local(y, w_queen, star=True,
 #                                         permutations=999)
 #
 # with open('getis_queen.json', 'w') as f:

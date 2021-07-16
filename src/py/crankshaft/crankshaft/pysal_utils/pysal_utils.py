@@ -29,7 +29,7 @@ def get_weight(query_res, w_type='knn', num_ngbrs=5):
     neighbors = {x['id']: x['neighbors'] for x in query_res}
     print('len of neighbors: %d' % len(neighbors))
 
-    built_weight = ps.W(neighbors)
+    built_weight = ps.lib.weights.W(neighbors)
     built_weight.transform = 'r'
 
     return built_weight

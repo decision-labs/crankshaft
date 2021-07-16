@@ -70,15 +70,15 @@ class Markov(object):
         # prep time data
         t_data = get_time_data(result, time_cols)
 
-        sp_markov_result = ps.Spatial_Markov(t_data,
+        sp_markov_result = ps.explore.giddy.markov.Spatial_Markov(t_data,
                                              weights,
                                              k=num_classes,
                                              fixed=False,
                                              permutations=permutations)
 
         # get lag classes
-        lag_classes = ps.Quantiles(
-            ps.lag_spatial(weights, t_data[:, -1]),
+        lag_classes = ps.viz.mapclassify.Quantiles(
+            ps.lib.weights.lag_spatial(weights, t_data[:, -1]),
             k=num_classes).yb
 
         # look up probablity distribution for each unit according to class and

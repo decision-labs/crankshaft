@@ -12,10 +12,10 @@ from .kernels import *
 from .search import golden_section, equal_interval, flexible_bw
 from .gwr import GWR
 from crankshaft.regression.glm.family import Gaussian, Poisson, Binomial
-import pysal.spreg.user_output as USER
+import pysal.model.spreg.user_output as USER
 from .diagnostics import get_AICc, get_AIC, get_BIC, get_CV
 from scipy.spatial.distance import pdist, squareform
-from pysal.common import KDTree
+from pysal.lib.cg import KDTree
 import numpy as np
 
 kernels = {1: fix_gauss, 2: adapt_gauss, 3: fix_bisquare, 4:

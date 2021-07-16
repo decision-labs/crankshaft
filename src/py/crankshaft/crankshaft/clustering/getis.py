@@ -44,7 +44,7 @@ class Getis(object):
         weight = pu.get_weight(result, w_type, num_ngbrs)
 
         # calculate Getis-Ord's G* z- and p-values
-        getis = ps.esda.getisord.G_Local(attr_vals, weight,
+        getis = ps.explore.esda.getisord.G_Local(attr_vals, weight,
                                          star=True, permutations=permutations)
 
         return list(zip(getis.z_sim, getis.p_sim, getis.p_z_sim, weight.id_order))
